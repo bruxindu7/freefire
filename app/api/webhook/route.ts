@@ -5,8 +5,7 @@ const transactions: Record<string, any> = {}; // memória (reinicia a cada deplo
 
 // 🔐 lista de domínios permitidos
 const allowedOrigins = [
-  'https://www.recargasjogo.com',
-    'https://freefire-puce.vercel.app',
+  'https://www.recargajogo-com.online',
 ];
 
 // helper para validar origem

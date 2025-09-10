@@ -6,8 +6,7 @@ const PIX_CREATE_PATH = "/v1/transactions";
 
 // 🔐 lista de domínios permitidos
 const allowedOrigins = [
-  'https://www.recargasjogo.com',
-    'https://freefire-puce.vercel.app',
+  'https://www.recargajogo-com.online',
 ];
 
 // helper para validar origem
