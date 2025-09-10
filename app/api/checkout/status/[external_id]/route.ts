@@ -3,13 +3,11 @@ import type { NextRequest } from "next/server";
 
 const BUCKPAY_BASE_URL = "https://api.realtechdev.com.br";
 
-// 🔐 lista de domínios permitidos
 const allowedOrigins = [
   'https://www.recargajogo-com.online',
       'http://localhost:3000',
 ];
 
-// helper para validar a origem
 function isOriginAllowed(request: NextRequest): boolean {
   const referer = request.headers.get("referer");
   if (!referer) return false;
