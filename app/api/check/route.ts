@@ -3,6 +3,8 @@ import type { NextRequest } from 'next/server';
 
 const allowedOrigins = [
   'https://www.recargajogo-com.online',
+    'http://localhost:3000',
+
 ];
 
 function isOriginAllowed(request: NextRequest): boolean {

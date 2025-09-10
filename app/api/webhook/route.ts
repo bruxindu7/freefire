@@ -6,6 +6,8 @@ const transactions: Record<string, any> = {}; // memória (reinicia a cada deplo
 // 🔐 lista de domínios permitidos
 const allowedOrigins = [
   'https://www.recargajogo-com.online',
+    'http://localhost:3000',
+
 ];
 
 // helper para validar origem
