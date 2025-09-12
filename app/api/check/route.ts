@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 const allowedOrigins = [
-  'https://www.recargas-jogo.online',
+  'https://www.recargasjogo-com.online',
     'http://localhost:3000',
 
 ];

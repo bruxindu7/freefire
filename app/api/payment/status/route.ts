@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 // 🔐 lista de domínios permitidos
 const allowedOrigins = [
-  'https://www.recargajogo-com.online',
+ 'https://www.recargasjogo-com.online',
       'http://localhost:3000',
 
 ];
