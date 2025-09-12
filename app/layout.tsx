@@ -35,6 +35,14 @@ export default function RootLayout({
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'AW-17532056473');
+
+              // Event snippet for pixel novo conversion page
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-17532056473/zPyZCM6E-pgbEJnn96dB',
+                  'value': 0.0,
+                  'currency': 'BRL',
+                  'transaction_id': ''
+              });
             `,
           }}
         />
