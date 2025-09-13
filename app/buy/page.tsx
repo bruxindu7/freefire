@@ -55,24 +55,16 @@ export default function PixPage() {
 
         const r = await fetch(`/api/webhook?id=${data.transactionId}`);
         const json = await r.json();
+if (json.status && json.status === "paid") {
+  showToast("success", "Pagamento aprovado!", "Redirecionando...");
+  clearInterval(statusInterval);
 
-        if (json.status && json.status === "paid") {
-          showToast("success", "Pagamento aprovado!", "Redirecionando...");
-          clearInterval(statusInterval);
+  // 🔥 Removido o Meta Pixel (gtag)
 
-          const priceNumber = parseFloat(String(data.totalAmount || data.price).replace(",", ".")) || 0;
-          if (typeof window !== "undefined" && (window as any).gtag) {
-            (window as any).gtag("event", "conversion", {
-              send_to: "AW-17475419419/kZsRCKDJmpYbEJv69oxB",
-              value: priceNumber,
-              currency: "BRL",
-            });
-          }
-
-          const upsellPages = ["/upsell", "/upsell-2", "/upsell-3"];
-          const randomPage = upsellPages[Math.floor(Math.random() * upsellPages.length)];
-          window.location.href = randomPage;
-        }
+  const upsellPages = ["/upsell", "/upsell-2", "/upsell-3"];
+  const randomPage = upsellPages[Math.floor(Math.random() * upsellPages.length)];
+  window.location.href = randomPage;
+}
 
         if (json.status === "not_found") {
           console.log("Transação ainda não registrada no backend");
